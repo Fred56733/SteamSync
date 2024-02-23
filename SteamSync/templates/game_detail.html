@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteamSync - {{ game.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/home">
+            <img src="{{ url_for('static', filename='logo7.png') }}" alt="SteamSync Logo" width="500" height="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Discounted_games">Specials</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home_with_news">News</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+<div class="main-container container">
+
+    <!-- Centered Game Header -->
+    <div class="game-header card game-card mb-3 text-center">
+        <img src="{{ game.imgUrl }}" alt="{{ game.title }}" class="card-img game-image">
+        <div class="card-body">
+            <h1 class="card-title game-title">{{ game.title }}</h1>
+        </div>
+    </div>
+
+    <div class="content-columns row">
+
+        <!-- Game Details Column -->
+        <div class="game-data col-md-6">
+            <h3 class="card-title">Description:</h3>
+            <!-- Game Description Tile -->
+            <div class="card review-card mb-3">
+                <div class="card-body">
+                    <p class="card-text">{{ game.description }}</p>
+                    <hr>
+                    <p><strong>Released:</strong> {{ game.released }}</p>
+                    <p><strong>Developer:</strong> <a href="{{ game.developer.link }}">{{ game.developer.name }}</a></p>
+                    <p><strong>Publisher:</strong> <a href="{{ game.publisher.link }}">{{ game.publisher.name }}</a></p>
+                    <p><strong>Reviews:</strong> {{ game.allReviews.summary }}</p>
+                    <p><strong>Price:</strong> {{ game.price }}</p>
+                </div>
+            </div>
+
+            <h2 class="card-title">Tags:</h2>
+            <!-- Game Tags Tile -->
+            <div class="card tag-card">
+                <div class="card-body">
+                    <ul>
+                        {% for tag in game.tags %}
+                        <li><a href="{{ tag.url }}">{{ tag.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- News Column -->
+<style>
+    .news-card {
+        word-wrap: break-word;
+    }
+</style>
+
+<div class="game-news col-md-6">
+    <h3>Game News:</h3>
+    {% if news %}
+        {% for item in news %}
+            <div class="news-card mb-1">
+                <p>{{ item.contents}}</p>  <!-- Truncate to 200 characters -->
+                <a href="{{ item.url }}" target="_blank">Read more</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No news items found.</p>
+    {% endif %}
+</div>
+
+
+
+        <!-- Reviews Column -->
+        <div class="game-reviews col-md-12">
+            <h3>Recent reviews:</h3>
+            <div class="review-grid">
+                {% for review in reviews %}
+                <div class="review-card mb-3">
+                    <p> {{ review.review|default('N/A') }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

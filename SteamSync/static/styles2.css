@@ -1,0 +1,270 @@
+.card {
+    width: 22.1rem;
+    margin: 1rem;
+    background-color: #343a40; /* Adjust based on your theme */
+    color: #ffffff; /* For white text */
+
+    /* Rest of your .card styles */
+}
+
+.card-img-top {
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    /* Add styles if needed */
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-primary {
+    background-color
+
+        body {
+            text-align: center; /* Center align text */
+            font-family: Arial, sans-serif; /* Set a font */
+        }
+        #articles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center tiles horizontally */
+            gap: 10px; /* Space between tiles */
+            padding: 10px;
+        }
+        .article {
+            border: 1px solid #ccc; /* Border around each tile */
+            padding: 20px;
+            margin-bottom: 20px; /* Space below each tile */
+            width: 300px; /* Fixed width, adjust as needed */
+            text-align: left; /* Align text inside tiles to left */
+            background-color: #f9f9f9; /* Light background for the tile */
+            border-radius: 8px; /* Rounded corners for the tile */
+        }
+        .article h2 {
+            color: #333; /* Dark color for the title */
+            margin-bottom: 15px; /* Space below the title */
+        }
+        .article a {
+            display: inline-block; /* Make the anchor a block element */
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px; /* Rounded corners for the button */
+            margin-top: 10px; /* Space above the button */
+        }
+        .article a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+
+    transition: border-color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid transparent;
+    /* Rest of your .card styles */
+}
+.card:hover {
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.25rem;
+
+}
+
+.card-title {
+    /* Add styles if needed */
+    transition: color 0.3s ease-in-out;
+}
+.card:hover .card-title {
+    color: #BA6DBB; /* Replace with your desired color */
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-primary {
+    background-color: #314155; /* Blue color, change it to your preferred color */
+    border-color: #FFFFFF; /* Border color, change it if necessary */
+
+        body {
+            text-align: center; /* Center align text */
+            font-family: Arial, sans-serif; /* Set a font */
+        }
+        #articles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center tiles horizontally */
+            gap: 10px; /* Space between tiles */
+            padding: 10px;
+        }
+        .article {
+            border: 1px solid #ccc; /* Border around each tile */
+            padding: 20px;
+            margin-bottom: 20px; /* Space below each tile */
+            width: 300px; /* Fixed width, adjust as needed */
+            text-align: left; /* Align text inside tiles to left */
+            background-color: #f9f9f9; /* Light background for the tile */
+            border-radius: 8px; /* Rounded corners for the tile */
+        }
+        .article h2 {
+            color: #333; /* Dark color for the title */
+            margin-bottom: 15px; /* Space below the title */
+        }
+        .article a {
+            display: inline-block; /* Make the anchor a block element */
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px; /* Rounded corners for the button */
+            margin-top: 10px; /* Space above the button */
+        }
+        .article a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+}
+.btn-primary:hover {
+    background-color: #1B2838; /* Replace with your desired hover color */
+    border-color: #FFFFFF; /* Replace with the desired border color if needed */
+}
+body {
+    background-color: #1B2838;
+    color: white;
+    background: linear-gradient(to bottom, #1B2838, #0a0a0a);
+}
+.steam-background {
+    background-color: #1B2838;
+    background: linear-gradient(to bottom, #1B2838, #0a0a0a);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steam-container {
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Adding a slight white tint for a "window" feel */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.steam-logo {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.steam-buttons {
+    margin-top: 20px;
+}
+
+.steam-btn {
+    margin: 5px;
+    width: 200px;
+}
+
+.navbar {
+    background-color: #101822;
+    /* Box Shadow for a raised/floating appearance */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom CSS for Navbar Links */
+.navbar-nav .nav-link {
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* Gradient background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for size */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-right: 10px; /* Spacing between buttons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px); /* Slight raise on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+}
+
+/* Custom CSS for active state of the nav link */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:active {
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* Gradient background for active state */
+}
+
+/* If using Bootstrap, override button styles for the search button */
+.navbar .btn-outline-success {
+    background: transparent;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Custom CSS for Navbar Links */
+.navbar-nav .nav-link {
+    background: linear-gradient(to right, #1B2838, #2C3E50); /* Gradient background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for size */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-right: 10px; /* Spacing between buttons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px); /* Slight raise on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+}
+
+/* Custom CSS for active state of the nav link */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:active {
+    background: linear-gradient(to right, #1B2838, #2C3E50); /* Gradient background for active state */
+}
+
+/* If using Bootstrap, override button styles for the search button */
+.navbar .btn-outline-success {
+    background: transparent;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
